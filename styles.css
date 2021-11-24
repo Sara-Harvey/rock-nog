@@ -1,1 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Berkshire+Swash&display=swap');
+@font-face {
+  font-family: 'Bindweed';
+  src: url('Bindweed.ttf') format('truetype');
+}
+
+
+html { font-size: calc(60% + 0.8vmin); }
+
+* {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+body { 
+  height: 1400px;
+  min-height: 100vh; 
+  background-color: #FFB8CB;
+}
+
+p {
+  font-size: 5.5rem;
+  font-family: Berkshire Swash, sans-serif;
+  color: white;
+  text-shadow: 2px 2px #796b4e;
+}
+
+/* scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: solid white;
+  border-width: 0px 2px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #796b4e; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #A39371; 
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.brand-wrapper {
+  display: flex;
+    transition: opacity 1s ease-out;
+}
+
+.brand-wrapper.is-hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.brand-name {
+  width: 100%;
+  height: auto;
+}
+
+.small-brand-name {
+  font-family: Bindweed, sans-serif;
+  font-size: 2px;
+  color: #FCB6C9;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.small-brand-name.is-visible {
+  font-size: 5em;
+  color: white;
+  text-shadow: 2px 2px #A39371;
+  padding: 25px;
+  z-index: 100;
+}
+
+.flex-container-2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.character {
+  flex: 1;  
+  padding: 30px 50px;
+}
+
+.svg_wrapper {
+  padding-left: 75px;
+  align-items: center;
+  background-color: #796b4e;
+  border: solid 1px white;
+  border-radius:  5px;
+}
+
+/* where carton animation was */
+
+#carton {
+  width: 80%;
+  height: auto;
+  padding: 10px;
+}
+
+.words {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.lyrics {
+  padding: 50px;
+  padding-left: 25px;
+  line-height: 1;
+}
+
+.info {
+  padding: 50px;
+  padding-left: 25px;
+  visibility: hidden;
+  font-family: Anton, sans-serif;
+  font-size: 2.5em;
+  color: #F42D4B;
+}
+
+@media (max-width: 800px) {
+  .body {
+    flex-direction: column;
+  }
+}
 
