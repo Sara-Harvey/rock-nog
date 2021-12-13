@@ -43,7 +43,7 @@ p {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #796b4e; 
+  background: #A49472; 
   border-radius: 5px;
 }
 
@@ -60,11 +60,14 @@ p {
 
 .brand-wrapper {
   display: flex;
-    transition: opacity 1s ease-out;
 }
 
 .brand-wrapper.is-hidden {
   opacity: 0;
+  transition: opacity 1s ease-in-out;
+   -moz-transition: opacity 1s ease-in-out;
+   -webkit-transition: opacity 1s ease-in-out;
+  
   height: 0;
   overflow: hidden;
   z-index: 0;
@@ -75,13 +78,20 @@ p {
   height: auto;
 }
 
-.small-brand-name {
-  font-family: Bindweed, sans-serif;
-  font-size: 2px;
-  color: #FCB6C9;
+.secondary-branding {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+
+.small-brand-name {
+  font-family: Bindweed, sans-serif;
+  font-size: 0px;
+  color: #FCB6C9;
+  z-index: 100;
 }
 
 .small-brand-name.is-visible {
@@ -89,7 +99,30 @@ p {
   color: white;
   text-shadow: 2px 2px #A39371;
   padding: 25px;
+  z-index: 1000;
+}
+
+.menu-circle-wrapper {
+  width: 0px;
+}
+
+.menu-circle-wrapper.is-visible {
+  width: 150px;
+  padding: 25px;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+#menu-circle {
+  width: 100%;
+  height: auto;
+}
+
+#circle-words {
   z-index: 100;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 5px;
 }
 
 .flex-container-2 {
@@ -104,19 +137,83 @@ p {
 
 .svg_wrapper {
   padding-left: 75px;
+  z-index: 0;
   align-items: center;
-  background-color: #796b4e;
-  border: solid 1px white;
-  border-radius:  5px;
+  animation: nog_rock 6s infinite;
+      -moz-animation: nog_rock 6s infinite;
+      -webkit-animation: nog_rock 6s infinite;
+      -o-animation: nog_rock 6s infinite;
 }
 
-/* where carton animation was */
+@keyframes nog_rock {
+      0% {transform: rotate(5deg)}
+      30% {transform: rotate(-40deg)}
+      50% {transform: rotate(-40deg)}
+      60% {transform: rotate(5deg)}
+    100% {transform: rotate(5deg)}
+  }
+
+@-webkit-keyframes nog_rock 
+    {
+      0% {-webkit-transform: rotate(5deg)}
+      30% {-webkit-transform: rotate(-40deg)}
+      50% {-webkit-transform:rotate(-40deg)}
+      60% {-webkit-transform: rotate(5deg)}
+    100% {-webkit-transform: rotate(5deg)}
+  }
+
+  @-moz-keyframes nog_rock 
+    {
+      0% {-moz-transform: rotate(5deg)}
+      30% {-moz-transform: rotate(-40deg)}
+      50% {-moz-transform:rotate(-40deg)}
+      60% {-moz-transform: rotate(5deg)}
+    100% {-moz-transform: rotate(5deg)}
+  }
 
 #carton {
   width: 80%;
   height: auto;
   padding: 10px;
 }
+
+#forearm, #elbow-hand {
+  animation: strum 1.5s infinite;
+  transform-origin: 150px;
+        -moz-animation: strum 2s infinite;
+        -webkit-animation: strum 2s infinite;
+        -o-animation: strum 2s infinite;
+}
+
+@keyframes strum {
+      0% {transform: rotate(0deg)}
+      10% {transform: rotate(18deg)}
+      15% {transform: rotate(0deg)}
+      25% {transform: rotate(10deg)}
+      50% {transform: rotate(0deg)}
+    100% {transform: rotate(0deg)}
+  }
+
+@-webkit-keyframes strum
+    {
+       0% {webkit-transform: rotate(0deg)}
+      10% {webkit-transform: rotate(18deg)}
+      15% {webkit-transform: rotate(0deg)}
+      25% {webkit-transform: rotate(10deg)}
+      50% {webkit-transform: rotate(0deg)}
+    100% {webkit-transform: rotate(0deg)}
+  }
+
+  @-moz-keyframes strum
+    {
+       0% {-moz-transform: rotate(0deg)}
+      10% {-moz-transform: rotate(18deg)}
+      15% {-moz-transform: rotate(0deg)}
+      25% {-moz-transform: rotate(10deg)}
+      50% {-moz-transform: rotate(0deg)}
+    100% {-moz-transform: rotate(0deg)}
+  }
+
 
 .words {
   flex: 1;
@@ -144,4 +241,3 @@ p {
     flex-direction: column;
   }
 }
-
