@@ -4,7 +4,6 @@
   src: url('Bindweed.ttf') format('truetype');
 }
 
-
 html { font-size: calc(60% + 0.8vmin); }
 
 * {
@@ -25,17 +24,13 @@ p {
   font-size: 5.5rem;
   font-family: Berkshire Swash, sans-serif;
   color: white;
-  text-shadow: 2px 2px #796b4e;
 }
 
 /* scrollbar */
-
-/* width */
 ::-webkit-scrollbar {
   width: 18px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   border: solid white;
   border-width: 0px 2px;
@@ -47,7 +42,6 @@ p {
   border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #A39371; 
 }
@@ -56,6 +50,15 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: url(clouds2.svg), linear-gradient(#F72D4A, #FFB8CB);
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 20s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: -930px 0; }
 }
 
 .brand-wrapper {
@@ -64,13 +67,12 @@ p {
 
 .brand-wrapper.is-hidden {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-   -moz-transition: opacity 1s ease-in-out;
-   -webkit-transition: opacity 1s ease-in-out;
-  
   height: 0;
   overflow: hidden;
   z-index: 0;
+  transition: opacity 1s ease-in-out;
+   -moz-transition: opacity 1s ease-in-out;
+   -webkit-transition: opacity 1s ease-in-out;
 }
 
 .brand-name {
@@ -85,13 +87,13 @@ p {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 9000;
 }
 
 .small-brand-name {
   font-family: Bindweed, sans-serif;
   font-size: 0px;
   color: #FCB6C9;
-  z-index: 100;
 }
 
 .small-brand-name.is-visible {
@@ -99,7 +101,6 @@ p {
   color: white;
   text-shadow: 2px 2px #A39371;
   padding: 25px;
-  z-index: 1000;
 }
 
 .menu-circle-wrapper {
@@ -119,7 +120,6 @@ p {
 }
 
 #circle-words {
-  z-index: 100;
   text-align: center;
   font-family: Helvetica, sans-serif;
   font-size: 5px;
@@ -137,7 +137,7 @@ p {
 
 .svg_wrapper {
   padding-left: 75px;
-  z-index: 0;
+  z-index: -1;
   align-items: center;
   animation: nog_rock 6s infinite;
       -moz-animation: nog_rock 6s infinite;
@@ -214,7 +214,6 @@ p {
     100% {-moz-transform: rotate(0deg)}
   }
 
-
 .words {
   flex: 1;
   display: flex;
@@ -225,15 +224,17 @@ p {
   padding: 50px;
   padding-left: 25px;
   line-height: 1;
+  text-shadow: 2px 2px #796b4e;
 }
 
 .info {
   padding: 50px;
   padding-left: 25px;
-  visibility: hidden;
   font-family: Anton, sans-serif;
-  font-size: 2.5em;
-  color: #F42D4B;
+  font-size: 2.25em;
+  color: white;
+
+  line-height: 1;
 }
 
 @media (max-width: 800px) {
@@ -241,3 +242,4 @@ p {
     flex-direction: column;
   }
 }
+
