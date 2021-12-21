@@ -67,7 +67,6 @@ p {
 
 .brand-wrapper.is-hidden {
   opacity: 0;
-  height: 0;
   overflow: hidden;
   z-index: 0;
   transition: opacity 1s ease-in-out;
