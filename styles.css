@@ -11,7 +11,7 @@ html { font-size: calc(60% + 0.8vmin); }
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica", sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 body { 
@@ -50,16 +50,16 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: url(clouds2.svg), linear-gradient(#F72D4A, #FFB8CB);
-  background-position: 0px 0px;
-  background-repeat: repeat-x;
+  background: url(clouds3.svg), linear-gradient(#F72D4A, #FFB8CB);
   animation: animatedBackground 20s linear infinite;
 }
 
+/*
 @keyframes animatedBackground {
   from { background-position: 0 0; }
   to { background-position: -930px 0; }
 }
+*/
 
 .brand-wrapper {
   display: flex;
@@ -161,14 +161,14 @@ p {
     100% {-webkit-transform: rotate(5deg)}
   }
 
-  @-moz-keyframes nog_rock 
+@-moz-keyframes nog_rock 
     {
       0% {-moz-transform: rotate(5deg)}
       30% {-moz-transform: rotate(-40deg)}
       50% {-moz-transform:rotate(-40deg)}
       60% {-moz-transform: rotate(5deg)}
     100% {-moz-transform: rotate(5deg)}
-  }
+}
 
 #carton {
   width: 80%;
@@ -232,10 +232,50 @@ p {
   font-family: Anton, sans-serif;
   font-size: 2.25em;
   color: white;
-
   line-height: 1;
 }
 
+.part-2 {
+  display: flex;
+  flex: 1;
+  padding: 25px;
+  background: linear-gradient(to left, #A49472 50%, #FFEBB8 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition:all 2s ease;
+}
+
+.part-2:hover {
+  background-position:left bottom;
+}
+
+div.slide-right {
+  width: 100%;
+  overflow: hidden;
+}
+
+div.slide-right p {
+  color: #F6304D;
+  font-family: Bindweed, sans-serif;
+  font-size: 20em;
+  animation: 4s slide-right;
+  animation-timing-function: ease;
+  text-align: right;
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+    width: 100%; 
+  }
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+
+/* mobile */
 @media (max-width: 800px) {
   .body {
     flex-direction: column;
