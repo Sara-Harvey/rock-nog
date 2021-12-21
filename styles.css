@@ -54,12 +54,10 @@ p {
   animation: animatedBackground 20s linear infinite;
 }
 
-/*
 @keyframes animatedBackground {
   from { background-position: 0 0; }
   to { background-position: -930px 0; }
 }
-*/
 
 .brand-wrapper {
   display: flex;
