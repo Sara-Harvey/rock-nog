@@ -240,5 +240,19 @@ p {
   .body {
     flex-direction: column;
   }
-}
 
+  .flex-container-2 {
+    flex-direction: column;
+  }
+
+  .lyrics {
+    font-size: 3.25em;
+    text-align: center;
+  }
+
+  .info {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+}
