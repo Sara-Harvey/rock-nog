@@ -20,7 +20,8 @@
               <svg id="menu-circle" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 433.5 433.5">
                 <style>.regular { font: bold 60px sans-serif; }</style>
                 <circle cx="216.75" cy="216.75" r="216.75" fill="#fff"/>
-                <text x="50%" y="50%" text-anchor="middle" stroke="black" stroke-width="2px" dy=".3em" class="regular">NUT NOGS</text>
+                
+                <text x="50%" y="50%" text-anchor="middle" fill="#a49472" stroke="#a49472" stroke-width="2px" dy=".3em" class="regular">NUT NOGS</text>
               </svg>
             </div></a>
           </div>
@@ -65,7 +66,11 @@
 
     <div class="part-2">
       <div class="slide-right"><p>NUTMEG</p></div>
+      <div class="slide-up"><p>AND MILK OF THE CASHEW</p></div>
     </div>
+
+    <div class="part-3"><h1>More info</h1></div>
+
 
     </div> <!--flex container -->
 
@@ -107,7 +112,35 @@
       scrollPos = windowY;
     }
 
+    const bg = document.querySelector('.part-2');
+    const nutmeg = document.querySelector('.slide-right p');
+    const cashew = document.querySelector('.slide-up p');
+    
+    var isInViewport = function (elem) {
+      var bounding = elem.getBoundingClientRect();
+        return (
+            bounding.top >= 0 &&
+            bounding.left >= 0 &&
+            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
+
+    var handleScrollAnimation = () => {
+        if (isInViewport(bg)) {
+          bg.classList.add("scrolled");
+          nutmeg.classList.add("scrolled");
+          cashew.classList.add("scrolled");
+        }
+        else {
+          bg.classList.remove("scrolled");
+          nutmeg.classList.remove("scrolled");
+          cashew.classList.remove("scrolled");
+        }
+    };
+
     window.addEventListener('scroll', debounce(checkPosition));
+    window.addEventListener('scroll', debounce(handleScrollAnimation));
 
     </script>
 
