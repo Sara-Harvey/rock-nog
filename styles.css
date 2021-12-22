@@ -360,11 +360,7 @@ div.slide-up p.scrolled {
 
 /* mobile */
 @media (max-width: 800px) {
-  .body {
-    flex-direction: column;
-  }
-
-  .flex-container-2 {
+  .body, .flex-container-2, .part-3 {
     flex-direction: column;
   }
 
@@ -376,5 +372,13 @@ div.slide-up p.scrolled {
   .info {
     font-size: 2.5em;
     text-align: center;
+  }
+
+  div.slide-right p {
+    font-size: 10em;
+  }
+
+  div.slide-up p {
+    font-size: 2.5em;
   }
 }
