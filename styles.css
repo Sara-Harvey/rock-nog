@@ -22,7 +22,7 @@ body {
 
 p {
   font-size: 5.5rem;
-  font-family: Berkshire Swash, sans-serif;
+  font-family: Berkshire Swash, Anton, sans-serif;
   color: white;
 }
 
@@ -54,10 +54,12 @@ p {
   animation: animatedBackground 20s linear infinite;
 }
 
+
 @keyframes animatedBackground {
   from { background-position: 0 0; }
   to { background-position: -930px 0; }
 }
+
 
 .brand-wrapper {
   display: flex;
@@ -88,7 +90,7 @@ p {
 }
 
 .small-brand-name {
-  font-family: Bindweed, sans-serif;
+  font-family: Bindweed, Anton, sans-serif;
   font-size: 0px;
   color: #FCB6C9;
 }
@@ -119,6 +121,7 @@ p {
 #circle-words {
   text-align: center;
   font-family: Helvetica, sans-serif;
+  color: #A39371;
   font-size: 5px;
 }
 
@@ -141,6 +144,8 @@ p {
       -webkit-animation: nog_rock 6s infinite;
       -o-animation: nog_rock 6s infinite;
 }
+
+/* character rocks */
 
 @keyframes nog_rock {
       0% {transform: rotate(5deg)}
@@ -166,12 +171,12 @@ p {
       50% {-moz-transform:rotate(-40deg)}
       60% {-moz-transform: rotate(5deg)}
     100% {-moz-transform: rotate(5deg)}
-}
+  }
 
 #carton {
   width: 80%;
   height: auto;
-  padding: 10px;
+  padding: 10px 10px 25px;
 }
 
 #forearm, #elbow-hand {
@@ -181,6 +186,8 @@ p {
         -webkit-animation: strum 2s infinite;
         -o-animation: strum 2s infinite;
 }
+
+/* character strums */
 
 @keyframes strum {
       0% {transform: rotate(0deg)}
@@ -198,8 +205,8 @@ p {
       15% {webkit-transform: rotate(0deg)}
       25% {webkit-transform: rotate(10deg)}
       50% {webkit-transform: rotate(0deg)}
-    100% {webkit-transform: rotate(0deg)}
-  }
+      100% {webkit-transform: rotate(0deg)}
+    }
 
   @-moz-keyframes strum
     {
@@ -208,8 +215,8 @@ p {
       15% {-moz-transform: rotate(0deg)}
       25% {-moz-transform: rotate(10deg)}
       50% {-moz-transform: rotate(0deg)}
-    100% {-moz-transform: rotate(0deg)}
-  }
+      100% {-moz-transform: rotate(0deg)}
+    }
 
 .words {
   flex: 1;
@@ -218,8 +225,7 @@ p {
 }
 
 .lyrics {
-  padding: 50px;
-  padding-left: 25px;
+  padding: 50px 0px 20px 25px;
   line-height: 1;
   text-shadow: 2px 2px #796b4e;
 }
@@ -235,16 +241,16 @@ p {
 
 .part-2 {
   display: flex;
-  flex: 1;
-  padding: 25px;
-  background: linear-gradient(to left, #A49472 50%, #FFEBB8 50%);
-  background-size: 200% 100%;
-  background-position:right bottom;
+  flex-direction: column;
+  /*padding: 25px 25px 0px;*/
+  background: linear-gradient(to top, #A49472 50%, #FFEBB8 50%);
+  background-size: 100% 200%;
+  background-position: top;
   transition:all 2s ease;
 }
 
-.part-2:hover {
-  background-position:left bottom;
+.part-2.scrolled {
+  background-position: bottom;
 }
 
 div.slide-right {
@@ -254,11 +260,24 @@ div.slide-right {
 
 div.slide-right p {
   color: #F6304D;
-  font-family: Bindweed, sans-serif;
+  font-family: Bindweed, Anton, sans-serif;
   font-size: 20em;
-  animation: 4s slide-right;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+div.slide-right p.scrolled { 
+  opacity: 1;
+  animation: 3s slide-right;
   animation-timing-function: ease;
   text-align: right;
+  line-height: 90%;
+  padding: 35px 25px 0px;
+  text-shadow: 3px 3px #FFEBB8;
+
 }
 
 @keyframes slide-right {
@@ -272,6 +291,44 @@ div.slide-right p {
   }
 }
 
+div.slide-up {
+  height: 100px;
+  overflow: hidden;
+}
+
+div.slide-up p {
+  color: #FFEBB8;
+  font-family: Anton, Berkshire Swash, sans-serif;
+  font-size: 4.5rem;
+  text-align: right;
+  padding: 0px 40px 20px;
+}
+
+div.slide-up p.scrolled { 
+  animation: 2s slide-up;
+  margin-top: 0%;
+  animation-timing-function: ease;
+  line-height: 90%;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 300%; 
+  }
+  to {
+    margin: 0px;
+    margin-top: 0%;
+    height: 100%;
+    padding-bottom: 10px;
+  }
+}
+
+.part-3 {
+  display: flex;
+  flex: 1;
+  background-color: white;
+}
 
 /* mobile */
 @media (max-width: 800px) {
