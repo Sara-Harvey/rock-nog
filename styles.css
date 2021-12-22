@@ -38,7 +38,7 @@ p {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #A49472; 
+  background: white; 
   border-radius: 5px;
 }
 
