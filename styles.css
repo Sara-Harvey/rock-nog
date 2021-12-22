@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Berkshire+Swash&family=Oswald&display=swap');
 @font-face {
   font-family: 'Bindweed';
   src: url('Bindweed.ttf') format('truetype');
@@ -21,13 +21,14 @@ body {
 }
 
 p {
-  font-size: 5.5rem;
-  font-family: Berkshire Swash, Anton, sans-serif;
+  font-size: 1.5rem;
+  font-family: Oswald, Anton, sans-serif;
   color: white;
 }
 
 /* scrollbar */
 ::-webkit-scrollbar {
+  background: white;
   width: 18px;
 }
 
@@ -38,12 +39,8 @@ p {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: white; 
+  background: #6C6046; 
   border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #A39371; 
 }
 
 .flex-container {
@@ -54,12 +51,10 @@ p {
   animation: animatedBackground 20s linear infinite;
 }
 
-
 @keyframes animatedBackground {
   from { background-position: 0 0; }
   to { background-position: -930px 0; }
 }
-
 
 .brand-wrapper {
   display: flex;
@@ -198,8 +193,7 @@ p {
     100% {transform: rotate(0deg)}
   }
 
-@-webkit-keyframes strum
-    {
+@-webkit-keyframes strum {
        0% {webkit-transform: rotate(0deg)}
       10% {webkit-transform: rotate(18deg)}
       15% {webkit-transform: rotate(0deg)}
@@ -208,8 +202,7 @@ p {
       100% {webkit-transform: rotate(0deg)}
     }
 
-  @-moz-keyframes strum
-    {
+  @-moz-keyframes strum {
        0% {-moz-transform: rotate(0deg)}
       10% {-moz-transform: rotate(18deg)}
       15% {-moz-transform: rotate(0deg)}
@@ -225,6 +218,8 @@ p {
 }
 
 .lyrics {
+  font-size: 5.5rem;
+  font-family: Berkshire Swash, Anton, sans-serif;
   padding: 50px 0px 20px 25px;
   line-height: 1;
   text-shadow: 2px 2px #796b4e;
@@ -242,7 +237,6 @@ p {
 .part-2 {
   display: flex;
   flex-direction: column;
-  /*padding: 25px 25px 0px;*/
   background: linear-gradient(to top, #A49472 50%, #FFEBB8 50%);
   background-size: 100% 200%;
   background-position: top;
@@ -277,7 +271,6 @@ div.slide-right p.scrolled {
   line-height: 90%;
   padding: 35px 25px 0px;
   text-shadow: 3px 3px #FFEBB8;
-
 }
 
 @keyframes slide-right {
@@ -301,11 +294,11 @@ div.slide-up p {
   font-family: Anton, Berkshire Swash, sans-serif;
   font-size: 4.5rem;
   text-align: right;
-  padding: 0px 40px 20px;
+  padding: 0px 60px 20px;
 }
 
 div.slide-up p.scrolled { 
-  animation: 2s slide-up;
+  animation: 1.5s slide-up;
   margin-top: 0%;
   animation-timing-function: ease;
   line-height: 90%;
@@ -327,8 +320,43 @@ div.slide-up p.scrolled {
 .part-3 {
   display: flex;
   flex: 1;
-  background-color: white;
+  flex-direction: row;
+  background-image: linear-gradient(#FA6C85, #FEB6CA);
+  background-color: #FA6C85;
+  padding: 35px 25px;
 }
+
+.founder-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 10px;
+}
+
+.founder-wrapper p {
+  font-size: 1.25rem;
+  color: #796B4E;
+}
+
+.founder-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 25px;
+  align-self: left;
+}
+
+.founder-info h1 {
+  color: white;
+  font-family: Anton, sans-serif;
+  font-size: 3rem;
+  text-shadow: 3px 3px #796B4E;
+}
+
+.founder-info p {
+  color: #6C6046;
+}
+
 
 /* mobile */
 @media (max-width: 800px) {
@@ -349,5 +377,4 @@ div.slide-up p.scrolled {
     font-size: 2.5em;
     text-align: center;
   }
-
 }
