@@ -394,6 +394,8 @@ div.slide-up p.scrolled {
 
   div.slide-right p {
     font-size: 10em;
+    opacity: 1;
+    transition: none;
   }
 
   div.slide-up p {
