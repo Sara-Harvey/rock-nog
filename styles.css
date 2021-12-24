@@ -397,6 +397,7 @@ div.slide-up p.scrolled {
     font-size: 10em;
     opacity: 1;
     transition: none;
+    text-align: center;
   }
 
   div.slide-up p {
