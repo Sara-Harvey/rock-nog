@@ -364,8 +364,22 @@ div.slide-up p.scrolled {
     flex-direction: column;
   }
 
+  .small-brand-name.is-visible {
+    font-size: 3em;
+    text-shadow: none;
+  }
+
+  .menu-circle-wrapper.is-visible a {
+    text-decoration: none;
+  }
+
+  .character {
+    flex: 1;  
+    padding: 15px 25px;
+  }
+
   .lyrics {
-    font-size: 3.25em;
+    font-size: 3.5em;
     text-align: center;
   }
 
@@ -376,9 +390,24 @@ div.slide-up p.scrolled {
 
   div.slide-right p {
     font-size: 10em;
+    text-align: center;
   }
 
   div.slide-up p {
     font-size: 2.5em;
   }
+
+  .founder-info h1 {
+    font-size: 2.5rem;
+    text-shadow: none;
+  }
+
+  .footer {
+    color: #6C6046;
+    font-family: Anton, sans-serif;
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 0px 25px 40px;
+  }
+
 }
