@@ -356,7 +356,13 @@ div.slide-up p.scrolled {
 .founder-info p {
   color: #6C6046;
 }
-
+.footer {
+  color: #6C6046;
+  font-family: Anton, sans-serif;
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 0px 25px 40px;
+}
 
 /* mobile */
 @media (max-width: 800px) {
@@ -369,13 +375,9 @@ div.slide-up p.scrolled {
     text-shadow: none;
   }
 
-  .menu-circle-wrapper.is-visible a {
-    text-decoration: none;
-  }
-
   .character {
     flex: 1;  
-    padding: 15px 25px;
+    padding: 10px 10px;
   }
 
   .lyrics {
@@ -384,7 +386,8 @@ div.slide-up p.scrolled {
   }
 
   .info {
-    font-size: 2.5em;
+    padding: 25px 20px;
+    font-size: 2.25em;
     text-align: center;
   }
 
@@ -401,13 +404,4 @@ div.slide-up p.scrolled {
     font-size: 2.5rem;
     text-shadow: none;
   }
-
-  .footer {
-    color: #6C6046;
-    font-family: Anton, sans-serif;
-    font-size: 1.75rem;
-    text-align: center;
-    padding: 0px 25px 40px;
-  }
-
 }
