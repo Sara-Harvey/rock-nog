@@ -18,6 +18,7 @@ body {
   height: 1400px;
   min-height: 100vh; 
   background-color: #FFB8CB;
+  overscroll-behavior: none;
 }
 
 p {
