@@ -370,6 +370,10 @@ div.slide-up p.scrolled {
   .body, .flex-container-2, .part-3 {
     flex-direction: column;
   }
+  
+  .body {
+    overscroll-behavior: none;
+  }
 
   .small-brand-name.is-visible {
     font-size: 3em;
