@@ -4,7 +4,10 @@
   src: url('Bindweed.ttf') format('truetype');
 }
 
-html { font-size: calc(60% + 0.8vmin); }
+html { font-size: calc(60% + 0.8vmin);
+height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;}
 
 * {
   font-size: 1rem;
@@ -16,9 +19,12 @@ html { font-size: calc(60% + 0.8vmin); }
 
 body { 
   height: 1400px;
-  min-height: 100vh; 
+  /* min-height: 100vh; */
+  height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   background-color: #FFB8CB;
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
 }
 
 p {
@@ -47,7 +53,10 @@ p {
 .flex-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  /* min-height: 100vh; */
   background: url(clouds3.svg), linear-gradient(#F72D4A, #FFB8CB);
   animation: animatedBackground 20s linear infinite;
 }
@@ -370,10 +379,6 @@ div.slide-up p.scrolled {
 @media (max-width: 800px) {
   .body, .flex-container-2, .part-3 {
     flex-direction: column;
-  }
-  
-  .body {
-    overscroll-behavior: none;
   }
 
   .small-brand-name.is-visible {
