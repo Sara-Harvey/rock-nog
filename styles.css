@@ -19,8 +19,7 @@ height: 100%;
 
 body { 
   height: 1400px;
-  /* min-height: 100vh; */
-  height: 100%;
+  min-height: 100vh;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   background-color: #FFB8CB;
@@ -53,10 +52,9 @@ p {
 .flex-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-  /* min-height: 100vh; */
   background: url(clouds3.svg), linear-gradient(#F72D4A, #FFB8CB);
   animation: animatedBackground 20s linear infinite;
 }
