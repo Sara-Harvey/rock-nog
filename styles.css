@@ -323,7 +323,6 @@ div.slide-up p.scrolled {
   flex: 1;
   flex-direction: row;
   background-image: linear-gradient(#FA6C85, #FEB6CA);
-  background-color: #FA6C85;
   padding: 35px 25px;
 }
 
@@ -359,6 +358,7 @@ div.slide-up p.scrolled {
 }
 .footer {
   color: #6C6046;
+  background-color: #FDB4C9;
   font-family: Anton, sans-serif;
   font-size: 1.75rem;
   text-align: center;
